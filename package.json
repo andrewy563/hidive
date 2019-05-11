@@ -1,0 +1,28 @@
+{
+  "name": "hidive",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": "https://github.com/andrewy563/hidive.git",
+  "author": "Andrew Yoon <andrewy563@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": "10.15.x",
+    "yarn": "1.15.x"
+  },
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.19.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "(cd client && yarn start)",
+    "dev": "concurrently \"yarn run server\" \"yarn run client\"",
+    "heroku-postbuild": "(cd client && yarn install && yarn build)"
+  }
+}
