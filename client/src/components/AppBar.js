@@ -5,8 +5,6 @@ import styled from '@emotion/styled'
 import Color from 'color'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-var bgbar = Color('#000000').alpha(0.85)
-
 const StyledHeaderLink = styled(Link)`
   padding-right: 10px;
   padding-left: 10px;
@@ -14,7 +12,7 @@ const StyledHeaderLink = styled(Link)`
   font-size: 13px !important;
   font-family: 'Roboto' sans-serif;
   font-style: normal;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   font-weight: 400;
   flex-shrink: 0;
   text-decoration: none;
@@ -31,16 +29,18 @@ const StyledDropdown = styled(Button)`
   font-style: normal;
   font-weight: 400;
   flex-shrink: 0;
-  &:focus: {
+  &:hover {
     color: #00AEF0
   }
 `
 
 
 const StyledFlex = styled(Flex)`
+  z-index: 2;
   position: fixed;
   top: 0;
   left: 0;
+  box-shadow: 4px 4px 6px rgba(0,0,0,.5);
 `
 
 class AppBar extends Component {
@@ -50,9 +50,9 @@ class AppBar extends Component {
     return (
     <StyledFlex
       width={1}
-      bg='black'
       alignItems='center'
       py={15}
+      bg='rgba(0,0,0,0.85)'
       flexWrap='wrap'
     >
       <Box width={1/5}/>
