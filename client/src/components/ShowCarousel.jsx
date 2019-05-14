@@ -1,16 +1,14 @@
 /** @jsx jsx */
 
-import { css, jsx } from "@emotion/core";
-import Slider from "react-slick";
-import PropTypes from "prop-types";
-import { Box, Link, Image } from "rebass";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { css, jsx } from '@emotion/core';
+import Slider from 'react-slick';
+import PropTypes from 'prop-types';
+import { Box, Link, Image } from 'rebass';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import "./ShowCarousel.css";
+import data from '../dashboard.json';
 
-import first from "../images/bigcarousel1.png";
-import second from "../images/bigcarousel2.png";
-import third from "../images/bigcarousel3.gif";
+import './ShowCarousel.css';
 
 const settings = {
   dots: true,
@@ -19,10 +17,10 @@ const settings = {
   slidesToShow: 5,
   slidesToScroll: 5,
   autoplay: false,
-  dotsClass: "slick-dots slick-show"
+  dotsClass: 'slick-dots slick-show'
 };
 
-const ShowCarousel = ({ category }) => (
+const ShowCarousel = ({ category, index }) => (
   <Box mb={15} mx={15}>
     <h1
       css={css`
@@ -39,41 +37,17 @@ const ShowCarousel = ({ category }) => (
       {category}
     </h1>
     <Slider {...settings}>
-      <div>
-        <Link href="https://www.hidive.com/devices">
-          <Image src={first} />
-        </Link>
-      </div>
-      <div>
-        <Link href="https://www.hidive.com/simulcasts">
-          <Image src={second} />
-        </Link>
-      </div>
-      <div>
-        <Link href="https://www.hidive.com/account/signup">
-          <Image src={third} />
-        </Link>
-      </div>
-      <div>
-        <Link href="https://www.hidive.com/account/signup">
-          <Image src={third} />
-        </Link>
-      </div>
-      <div>
-        <Link href="https://www.hidive.com/account/signup">
-          <Image src={third} />
-        </Link>
-      </div>
-      <div>
-        <Link href="https://www.hidive.com/account/signup">
-          <Image src={third} />
-        </Link>
-      </div>
+      {data.Data.TitleRows[index].Titles.map((show, i) => (
+        <div className={i}>
+          <Image src={show.MasterArtUrl} />
+        </div>
+      ))}
     </Slider>
   </Box>
 );
 ShowCarousel.propTypes = {
-  category: PropTypes.string.isRequired
+  category: PropTypes.string.isRequired,
+  index: PropTypes.number.isRequired
 };
 
 export default ShowCarousel;

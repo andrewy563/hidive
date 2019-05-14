@@ -1,11 +1,12 @@
 /** @jsx jsx */
 
 // import React from "react";
-import { Box } from "rebass";
-import { css, jsx } from "@emotion/core";
-import BigCarousel from "./BigCarousel";
-import Ad from "./Ad";
-import ShowCarousel from "./ShowCarousel";
+import { Box } from 'rebass';
+import { css, jsx } from '@emotion/core';
+import BigCarousel from './BigCarousel';
+import Ad from './Ad';
+import ShowCarousel from './ShowCarousel';
+import data from '../dashboard.json';
 
 const Body = () => (
   <Box
@@ -27,13 +28,9 @@ const Body = () => (
   >
     <Ad />
     <BigCarousel />
-    <ShowCarousel category="free epsiodes" />
-    <ShowCarousel category="simulcasts" />
-    <ShowCarousel category="dubs" />
-    <ShowCarousel category="exclusives" />
-    <ShowCarousel category="recently added" />
-    <ShowCarousel category="trending now" />
-    <ShowCarousel category="most popular" />
+    {data.Data.TitleRows.map((category, index) => (
+      <ShowCarousel category={category.Name} index={index} />
+    ))}
   </Box>
 );
 

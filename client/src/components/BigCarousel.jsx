@@ -1,14 +1,14 @@
 /** @jsx jsx */
 
-import { css, jsx } from "@emotion/core";
-import Slider from "react-slick";
-import { Box, Link, Image } from "rebass";
+import { css, jsx } from '@emotion/core';
+import Slider from 'react-slick';
+import { Box, Link, Image } from 'rebass';
 
-import first from "../images/bigcarousel1.png";
-import second from "../images/bigcarousel2.png";
-import third from "../images/bigcarousel3.gif";
+import first from '../images/bigcarousel1.png';
+import second from '../images/bigcarousel2.png';
+import third from '../images/bigcarousel3.gif';
 
-import "./BigCarousel.css";
+import './BigCarousel.css';
 
 const settings = {
   dots: true,
@@ -18,8 +18,9 @@ const settings = {
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 4000,
-  dotsClass: "slick-dots"
+  dotsClass: 'slick-dots'
 };
+
 const BigCarousel = () => (
   <Box mb={45}>
     <Slider

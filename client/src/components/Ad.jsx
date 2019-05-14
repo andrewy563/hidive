@@ -1,11 +1,11 @@
 /** @jsx jsx */
 
-import { css, jsx } from "@emotion/core";
-import { PureComponent } from "react";
-import { Box, Link, Image } from "rebass";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { css, jsx } from '@emotion/core';
+import { PureComponent } from 'react';
+import { Box, Link, Image } from 'rebass';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import ad from "../images/ad.png";
+import ad from '../images/ad.png';
 
 class Ad extends PureComponent {
   constructor(props) {

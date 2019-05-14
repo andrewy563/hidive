@@ -1,11 +1,11 @@
 /** @jsx jsx */
 
-import { css, jsx } from "@emotion/core";
-import { Flex, Box, Link, Image, Button, Text } from "rebass";
-import styled from "@emotion/styled";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { css, jsx } from '@emotion/core';
+import { Flex, Box, Link, Image, Button } from 'rebass';
+import styled from '@emotion/styled';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import logo from "../images/HIDIVE_logo.png";
+import logo from '../images/HIDIVE_logo.png';
 
 const StyledHeaderLink = styled(Link)`
   padding-right: 10px;
@@ -26,7 +26,7 @@ const StyledDropdown = styled(Button)`
   padding-right: 10px;
   padding-left: 10px;
   color: white;
-  font-family: "Roboto" sans-serif;
+  font-family: 'Roboto' sans-serif;
   font-style: normal;
   flex-shrink: 0;
   &:hover {
