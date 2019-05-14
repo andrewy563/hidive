@@ -1,9 +1,13 @@
-import React from "react";
+/** @jsx jsx */
+
+import { css, jsx } from "@emotion/core";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faSearch,
   faUser,
-  faAngleLeft
+  faAngleLeft,
+  faAngleRight,
+  faTimes
 } from "@fortawesome/free-solid-svg-icons";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -11,13 +15,12 @@ import "slick-carousel/slick/slick-theme.css";
 import AppBar from "./components/AppBar";
 import Body from "./components/Body";
 
-library.add(faSearch, faUser, faAngleLeft);
+library.add(faSearch, faUser, faAngleLeft, faTimes, faAngleRight);
 
 const App = () => (
   <div>
-    <h4>HELLO</h4>
     <AppBar />
-    <Body />
+    <Body className="body-component" />
   </div>
 );
 

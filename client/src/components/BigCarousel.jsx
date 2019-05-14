@@ -1,4 +1,6 @@
-import React from "react";
+/** @jsx jsx */
+
+import { css, jsx } from "@emotion/core";
 import Slider from "react-slick";
 import { Box, Link, Image } from "rebass";
 
@@ -16,11 +18,16 @@ const settings = {
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 4000,
-  dotsClass: "slick-dots slick-thumb"
+  dotsClass: "slick-dots"
 };
 const BigCarousel = () => (
-  <Box mb={30}>
-    <Slider {...settings}>
+  <Box mb={45}>
+    <Slider
+      {...settings}
+      css={css`
+        margin-bottom: 30px;
+      `}
+    >
       <div>
         <Link href="https://www.hidive.com/devices">
           <Image src={first} />

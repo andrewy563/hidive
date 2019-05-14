@@ -1,28 +1,40 @@
 /** @jsx jsx */
 
 // import React from "react";
-import { Box, Heading } from "rebass";
-import { jsx } from "@emotion/core";
-import styled from "@emotion/styled";
+import { Box } from "rebass";
+import { css, jsx } from "@emotion/core";
 import BigCarousel from "./BigCarousel";
 import Ad from "./Ad";
-
-const StyledBody = styled(Box)`
-  z-index: 1;
-  position: relative;
-  margin: 0;
-  left: 0;
-  margin-left: auto;
-  margin-right: auto;
-  max-width={1140}
-`;
+import ShowCarousel from "./ShowCarousel";
 
 const Body = () => (
-  <StyledBody width={3 / 5} bg="#222325" px="10">
+  <Box
+    css={css`
+      z-index: 1;
+      position: relative;
+      margin: 0px auto;
+      margin-bottom: 30px;
+      box-shadow: rgba(0, 0, 0, 0.8);
+      padding-top: 68px;
+      padding-bottom: 100px;
+      min-height: 600px;
+      max-width: 1140px;
+      color: rgb(167, 172, 178);
+      line-height: 20px;
+    `}
+    className="body-div"
+    bg="rgb(34, 35, 37)"
+  >
     <Ad />
     <BigCarousel />
-    <Heading>FREE EPISODES</Heading>
-  </StyledBody>
+    <ShowCarousel category="free epsiodes" />
+    <ShowCarousel category="simulcasts" />
+    <ShowCarousel category="dubs" />
+    <ShowCarousel category="exclusives" />
+    <ShowCarousel category="recently added" />
+    <ShowCarousel category="trending now" />
+    <ShowCarousel category="most popular" />
+  </Box>
 );
 
 export default Body;
