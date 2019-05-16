@@ -1,27 +1,14 @@
 /** @jsx jsx */
 
 import { css, jsx } from '@emotion/core';
-import { Flex, Box, Link, Image, Button } from 'rebass';
+import { Flex, Box, Button } from 'rebass';
 import styled from '@emotion/styled';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import logo from '../images/HIDIVE_logo.png';
+import HomeLogo from './HomeLogo';
+import HeaderLink from './HeaderLink';
+import Search from './Search';
 
-const StyledHeaderLink = styled(Link)`
-  padding-right: 10px;
-  padding-left: 10px;
-  position: relative;
-  color: white;
-  flex-shrink: 0;
-  vertical-align: middle;
-  text-align: left;
-  font-style: normal;
-  text-decoration-line: none;
-  text-transform: uppercase;
-  &:hover {
-    color: #00aef0;
-  }
-`;
 const StyledDropdown = styled(Button)`
   padding-right: 10px;
   padding-left: 10px;
@@ -51,7 +38,6 @@ const AppBar = () => (
   >
     <Flex
       className="navbar-content"
-      alignItems="center"
       flexWrap="wrap"
       css={css`
         margin-bottom: 5px;
@@ -61,31 +47,39 @@ const AppBar = () => (
         max-width: 1140px;
       `}
     >
-      <Box className="row" width={0.75} alignSelf="center">
-        <StyledHeaderLink href="/">
-          <Image src={logo} height={35} />
-        </StyledHeaderLink>
-        <StyledHeaderLink href="/">SIMULCASTS</StyledHeaderLink>
-        <StyledHeaderLink href="/">DUBS</StyledHeaderLink>
-        <StyledHeaderLink href="/">SERIES</StyledHeaderLink>
-        <StyledHeaderLink href="/">MOVIES</StyledHeaderLink>
-        <StyledHeaderLink href="/">FREE!</StyledHeaderLink>
-        <StyledHeaderLink color="#A7ACB2" href="/">
+      <Flex className="row" alignItems="center" width={0.75}>
+        <HomeLogo />
+        <HeaderLink href="/" header="simulcasts" />
+        <HeaderLink href="/" header="dubs" />
+        <HeaderLink href="/" header="series" />
+        <HeaderLink href="/" header="movies" />
+        <HeaderLink href="/" header="free!" />
+        <small
+          css={css`
+            color: #a7acb2;
+            font-size: 13px;
+            vertical-align: middle;
+            padding-right: 10px;
+            padding-left: 10px;
+            position: relative;
+            &:hover {
+              color: #a7acb2;
+            }
+          `}
+        >
           |
-        </StyledHeaderLink>
-        <StyledHeaderLink>SCHEDULE</StyledHeaderLink>
+        </small>
+        <HeaderLink href="/" header="schedule" />
         <StyledDropdown bg="transparent">STORE</StyledDropdown>
-        <StyledHeaderLink>NEWS</StyledHeaderLink>
-      </Box>
-      <Box width={0.25}>
-        <StyledHeaderLink>FREE TRIAL!</StyledHeaderLink>
-        <StyledDropdown bg="transparent" flex-shrink={0}>
-          <FontAwesomeIcon icon="search" />
-        </StyledDropdown>
+        <HeaderLink href="/" header="news" />
+      </Flex>
+      <Flex width={0.25} alignItems="center" justifyContent="flex-end">
+        <HeaderLink href="/" header="free trial!" />
+        <Search />
         <StyledDropdown bg="transparent" flex-shrink={0}>
           <FontAwesomeIcon icon="user" />
         </StyledDropdown>
-      </Box>
+      </Flex>
     </Flex>
   </Box>
 );

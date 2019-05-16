@@ -34,6 +34,7 @@ class Ad extends PureComponent {
               onClick={this.handleClick}
               size="sm"
               css={css`
+                font-size: 20px;
                 z-index: 10;
                 position: relative;
                 top: -81px;

@@ -3,12 +3,16 @@
 // import React from "react";
 import { Box } from 'rebass';
 import { css, jsx } from '@emotion/core';
+import { connect } from 'react-redux';
+import { selectShow } from '../actions';
+
 import BigCarousel from './BigCarousel';
 import Ad from './Ad';
 import ShowCarousel from './ShowCarousel';
+import ShowDetail from './ShowDetail';
 import data from '../dashboard.json';
 
-const Body = () => (
+const Body = ({ selectedId, selectedIndex, selectedColumn }) => (
   <Box
     css={css`
       z-index: 1;
@@ -29,9 +33,22 @@ const Body = () => (
     <Ad />
     <BigCarousel />
     {data.Data.TitleRows.map((category, index) => (
-      <ShowCarousel category={category.Name} index={index} />
+      <Box mx={15}>
+        <ShowCarousel category={category.Name} index={index} />
+        {index === selectedIndex ? (
+          <ShowDetail id={selectedId} index={index} column={selectedColumn} />
+        ) : null}
+      </Box>
     ))}
   </Box>
 );
 
-export default Body;
+const mapStateToProps = state => {
+  console.log(state);
+  return { selectedId: state.id, selectedIndex: state.index, selectedColumn: state.column };
+};
+
+export default connect(
+  mapStateToProps,
+  { selectShow }
+)(Body);
