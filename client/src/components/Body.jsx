@@ -8,6 +8,7 @@ import { connect } from 'react-redux';
 import { selectShow } from '../actions';
 import Ad from './Ad';
 import HomePage from './HomePage';
+import FooterBar from './FooterBar';
 
 const Body = () => (
   <Box
@@ -18,7 +19,6 @@ const Body = () => (
       margin-bottom: 30px;
       box-shadow: rgba(0, 0, 0, 0.8);
       padding-top: 68px;
-      padding-bottom: 100px;
       min-height: 600px;
       max-width: 1140px;
       color: rgb(167, 172, 178);
@@ -29,6 +29,7 @@ const Body = () => (
   >
     <Ad />
     <HomePage />
+    <FooterBar />
   </Box>
 );
 

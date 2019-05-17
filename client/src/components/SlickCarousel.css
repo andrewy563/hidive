@@ -11,10 +11,6 @@
   text-align: right;
 }
 
-.slick-show {
-  bottom: 2000px;
-}
-
 .slick-prev {
   z-index: 1000;
 }

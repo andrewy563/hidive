@@ -21,11 +21,9 @@ const Search = () => (
     <FontAwesomeIcon
       icon="search"
       css={css`
-        font-size: 20px;
         position: relative;
         padding-right: 10px;
         padding-left: 10px;
-        bottom: 5px;
         color: white;
         font-family: 'Roboto' sans-serif;
         font-style: normal;
@@ -34,6 +32,7 @@ const Search = () => (
           color: #00aef0;
         }
       `}
+      size="lg"
     />
   </Flex>
 );

@@ -4,7 +4,6 @@ import { css, jsx } from '@emotion/core';
 import Slider from 'react-slick';
 import PropTypes from 'prop-types';
 import { Box } from 'rebass';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import ShowItem from './ShowItem';
 

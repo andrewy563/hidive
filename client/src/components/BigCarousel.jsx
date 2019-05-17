@@ -17,8 +17,7 @@ const settings = {
   slidesToShow: 1,
   slidesToScroll: 1,
   autoplay: true,
-  autoplaySpeed: 4000,
-  dotsClass: 'slick-dots'
+  autoplaySpeed: 4000
 };
 
 const BigCarousel = () => (

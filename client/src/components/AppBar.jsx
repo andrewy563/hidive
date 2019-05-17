@@ -40,7 +40,7 @@ const AppBar = () => (
       className="navbar-content"
       flexWrap="wrap"
       css={css`
-        margin-bottom: 5px;
+        margin-bottom: 11px;
         padding-top: 15px;
         margin-right: auto;
         margin-left: auto;
@@ -77,7 +77,7 @@ const AppBar = () => (
         <HeaderLink href="/" header="free trial!" />
         <Search />
         <StyledDropdown bg="transparent" flex-shrink={0}>
-          <FontAwesomeIcon icon="user" />
+          <FontAwesomeIcon icon="user" size="lg" />
         </StyledDropdown>
       </Flex>
     </Flex>
