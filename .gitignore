@@ -1,7 +1,6 @@
 # obtained from https://github.com/github/gitignore/blob/master/Node.gitignore
 /client/build/
 .DS_Store
-dashboard.json
 # Logs
 logs
 *.log
