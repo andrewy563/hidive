@@ -23,9 +23,11 @@ class ShowItem extends Component {
   hoverOff = () => () => {
     this.setState({ hover: false });
   };
+
   onClick = (id, index, column) => () => {
     this.props.selectShow(id, index, column);
   };
+
   render() {
     const { Id, MasterArtUrl, Name, Row, column } = this.props;
     const { hover } = this.state;

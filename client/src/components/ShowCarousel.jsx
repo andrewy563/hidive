@@ -17,8 +17,7 @@ const settings = {
   speed: 500,
   slidesToShow: 5,
   slidesToScroll: 5,
-  autoplay: false,
-  dotsClass: 'slick-dots slick-show'
+  autoplay: false
 };
 
 const ShowCarousel = ({ category, index }) => (

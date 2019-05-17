@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import { css, jsx } from '@emotion/core';
-import { Link } from 'rebass';
+import { Link } from 'react-router-dom';
 import { PropTypes } from 'prop-types';
 
 const HeaderLink = ({ href, header }) => (
@@ -21,7 +21,7 @@ const HeaderLink = ({ href, header }) => (
         color: #00aef0;
       }
     `}
-    href={href}
+    to={href}
   >
     {header}
   </Link>

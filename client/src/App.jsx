@@ -2,6 +2,7 @@
 
 import { jsx } from '@emotion/core';
 import { library } from '@fortawesome/fontawesome-svg-core';
+import { BrowserRouter as Router } from 'react-router-dom';
 import {
   faSearch,
   faUser,
@@ -20,10 +21,12 @@ import Body from './components/Body';
 library.add(faSearch, faUser, faAngleLeft, faTimes, faAngleRight, faPlayCircle, faChevronDown);
 
 const App = () => (
-  <div>
-    <AppBar />
-    <Body className="body-component" />
-  </div>
+  <Router>
+    <div>
+      <AppBar />
+      <Body className="body-component" />
+    </div>
+  </Router>
 );
 
 export default App;

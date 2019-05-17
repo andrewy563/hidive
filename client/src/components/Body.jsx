@@ -4,15 +4,12 @@
 import { Box } from 'rebass';
 import { css, jsx } from '@emotion/core';
 import { connect } from 'react-redux';
+
 import { selectShow } from '../actions';
-
-import BigCarousel from './BigCarousel';
 import Ad from './Ad';
-import ShowCarousel from './ShowCarousel';
-import ShowDetail from './ShowDetail';
-import data from '../dashboard.json';
+import HomePage from './HomePage';
 
-const Body = ({ selectedId, selectedIndex, selectedColumn }) => (
+const Body = () => (
   <Box
     css={css`
       z-index: 1;
@@ -31,15 +28,7 @@ const Body = ({ selectedId, selectedIndex, selectedColumn }) => (
     bg="rgb(34, 35, 37)"
   >
     <Ad />
-    <BigCarousel />
-    {data.Data.TitleRows.map((category, index) => (
-      <Box mx={15}>
-        <ShowCarousel category={category.Name} index={index} />
-        {index === selectedIndex ? (
-          <ShowDetail id={selectedId} index={index} column={selectedColumn} />
-        ) : null}
-      </Box>
-    ))}
+    <HomePage />
   </Box>
 );
 
