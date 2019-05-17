@@ -10,6 +10,20 @@
   bottom: 152.79px;
   text-align: right;
 }
+
+.slick-show {
+  bottom: 2000px;
+}
+
 .slick-prev {
-  left: -25px;
+  z-index: 1000;
+}
+
+.slick-prev,
+.slick-next {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 50px;
+  margin-top: -10px;
 }

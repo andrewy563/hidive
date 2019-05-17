@@ -2,17 +2,6 @@
   bottom: 2000px;
 }
 
-.title-slider .slick-prev,
-.title-slider .slick-next {
-  width: 40px !important;
-  height: 90%;
-  top: 10px;
-}
-
-.title-slider .slick-prev {
-  left: -20px;
-}
-
 .slick-prev {
   left: 0px;
   z-index: 1000;
@@ -33,19 +22,4 @@
   border: none;
   outline: none;
   background-color: transparent;
-}
-
-button {
-  font-family: inherit;
-  -webkit-appearance: button;
-  text-transform: none;
-  overflow: visible;
-  margin: 0;
-  font: inherit;
-  align-items: flex-start;
-  text-align: center;
-}
-
-.slick-dots li.slick-active button:before {
-  color: #00aef0 !important;
 }

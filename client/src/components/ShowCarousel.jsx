@@ -9,7 +9,7 @@ import { Box } from 'rebass';
 import ShowItem from './ShowItem';
 
 import data from '../dashboard.json';
-import './ShowCarousel.css';
+import './SlickCarousel.css';
 
 const settings = {
   dots: true,
@@ -17,7 +17,8 @@ const settings = {
   speed: 500,
   slidesToShow: 5,
   slidesToScroll: 5,
-  autoplay: false
+  autoplay: false,
+  dotsClass: 'slick-dots show-dots'
 };
 
 const ShowCarousel = ({ category, index }) => (
